@@ -118,9 +118,10 @@ public class User {
 ![Alt text](/assets/Web_Mysql/4.png  "phpStudy"){:height="60%" width="60%"}
 ### 演示视频
 <center>
-<video width="90%" height="385" src="/assets/Web_Mysql/first.mp4" type="video/mp4" 
+<!-- <video width="90%" height="385" src="/assets/Web_Mysql/first.mp4" type="video/mp4" 
     preload="auto" controls="controls" loop="-1">
-</video>
+</video> -->
+<iframe type="text/html" width="100%" height="600" src="//player.bilibili.com/player.html?aid=286185997&bvid=BV1pf4y117S5&cid=208575226&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </center>
 
 # 进阶说明
@@ -167,9 +168,10 @@ isAdmin char(1) not null)AUTO_INCREMENT=1000;
 ......【详情见`仅供学习`】  
 ### 演示视频
 <center>
-<video width="90%" height="385" src="/assets/Web_Mysql/second.mp4" type="video/mp4" 
+<!-- <video width="90%" height="385" src="/assets/Web_Mysql/second.mp4" type="video/mp4" 
     preload="auto" controls="controls" loop="-1">
-</video>
+</video> -->
+<iframe type="text/html"  width="100%" height="600" src="//player.bilibili.com/player.html?aid=286235086&bvid=BV1Uf4y117wR&cid=208575966&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </center>
 
 ## &diams;问题说明
