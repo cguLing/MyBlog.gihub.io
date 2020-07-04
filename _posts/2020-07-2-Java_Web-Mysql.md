@@ -3,12 +3,11 @@ layout: post
 title: 'Java_web+MySQL演示'
 date: 2020-07-2 00:58:06 +0800
 author: Jekyll
-color: rgb(255,210,32)
+color: rgb(255,102,0)
 cover: '../assets/welcome.jpeg'
 tags: [eclipse,Java_web,mysql,tomcat] 
 subtitle: '视频演示简单说明【资源仅供学习】'
 ---
-<!-- <iframe type="text/html" width="90%" height="385" src="/assets/Web_Mysql/first.mp4" frameborder="0"  ></iframe> -->
 # 前情提要
 - 实现Java与MySQL的简单互动  
    - 数据库的连接  
