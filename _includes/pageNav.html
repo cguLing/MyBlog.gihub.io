@@ -1,4 +1,4 @@
-<nav class="pagination">
+<!-- <nav class="pagination">
   <div class="page-links">
     {% if paginator.page == 1 %}
         <a href="{{ "/" | relative_url }}" class="page-link" title="Index Page">1</a>
@@ -10,13 +10,13 @@
             <a href="/page{{ paginator.previous_page }}/" class="page-link" title="Previous Page">&laquo;</a>
         {% endif %}
     {% endif %}
-    {% if paginator.next_page %}
+    {% if paginator.next_page %} -->
         <!-- {% if paginator.next_page == 1 %}
             <a href="{{ "/" | relative_url }}" class="page-link" title="Next Page">\</a>
             {% else %}
             <a href="/page{{ paginator.next_page }}/" class="page-link" title="Next Page">&raquo;</a>
         {% endif %} -->
-        <a href="/page{{ paginator.next_page }}/" class="page-link" title="Next Page">&raquo;</a>
+        <!-- <a href="/page{{ paginator.next_page }}/" class="page-link" title="Next Page">&raquo;</a>
     {% endif %}
     {% if paginator.page == paginator.total_pages %}
       {% if paginator.total_pages == 1 %}
@@ -25,6 +25,66 @@
         <a href="/page{{ paginator.page }}" class="page-link" title="Final Page">{{ paginator.page }}</a>
       {% endif %}
     {% endif %}
-  </div>
+  </div> 
+</nav>--> 
+<nav class="pagination">
+    <div class="page-links" style="border:2px solid;border-radius:25px;-moz-border-radius:25px; width: 400px;">
+      {% if paginator.total_pages > 1 %}
+        <!-- 如果有前一页的页号 -->
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+            <a href="{{ "/" | relative_url }}" class="page-link" title="Previous Page">&laquo;</a>
+          {% else %}
+            <a href="/page{{ paginator.previous_page }}/" class="page-link" title="Previous Page">&laquo;</a>
+          {% endif %}
+        {% endif %}
+        {% if paginator.page <= 3 %}
+            {% for num in (1..paginator.total_pages) %}
+                {% if forloop.index <= 5 %}
+                  {% if num != paginator.page %}
+                        {% if num == 1 %}
+                           <a href="{{ "/" | relative_url }}" class="page-link">1</a>
+                        {% else %}
+                            <a href="/page{{num}}" class="page-link">{{num}}</a>
+                        {% endif %}
+                    {% endif %}
+                    <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                    {% if num == paginator.page %}
+                        <a href="javascript:;" class="page-link">{{num}}</a>
+                    {% endif %}
+                 {% endif %}
+            {% endfor %}
+        {% else %}
+            {% assign index1 = paginator.page|plus:1 %}
+            {% assign index2 = paginator.page|plus:2 %}
+            {% if index1 > paginator.total_pages and paginator.total_pages != 4 %}
+                <a href="/page{{paginator.page|plus:-4}}" class="page-link">{{paginator.page|plus:-4}}</a>
+            {% endif %}
+            {% if index2 > paginator.total_pages %}
+                <a href="/page{{paginator.page|plus:-3}}" class="page-link">{{paginator.page|plus:-3}}</a>
+            {% endif %}
+            <a href="/page{{paginator.page|plus:-2}}" class="page-link">{{paginator.page|plus:-2}}</a>
+            <a href="/page{{paginator.page|plus:-1}}" class="page-link">{{paginator.page|plus:-1}}</a>
+            <a href="javascript:;" class="active page-link">{{paginator.page}}</a>
+            {% if index1 <= paginator.total_pages %}
+                <a href="/page{{paginator.page|plus:1}}" class="page-link">{{paginator.page|plus:1}}</a>
+            {% endif %}
+            {% if index2 <= paginator.total_pages %}
+                <a href="/page{{paginator.page|plus:2}}" class="page-link">{{paginator.page|plus:2}}</a>
+            {% endif %}
+        {% endif %}
 
+        {% if paginator.next_page %}
+          <a href="/page{{ paginator.next_page }}/" class="page-link" title="Next Page">&raquo;</a>
+        {% endif %}
+        <!-- 如果有文章才会显示 -->
+      {% if paginator.page == paginator.total_pages %}
+        <a href="{{ "/" | relative_url }}" class="page-link" title="No Next">\</a>
+      {% endif %}
+    <!-- 只有一页的情况 -->
+    {% else %}
+      <a href="{{ "/" | relative_url }}" class="page-link" title="Index Page">1</a>
+    {% endif %}
+    </div>
+    <a class="btn btn-outline disabled">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a>
 </nav>

@@ -2,7 +2,7 @@
 layout: post
 title: 'Java_web+MySQL演示'
 date: 2020-07-2 00:58:06 +0800
-author: Jekyll
+author: YULIA
 color: rgb(255,102,0)
 cover: '../assets/welcome.jpeg'
 tags: [eclipse,Java_web,mysql,tomcat] 

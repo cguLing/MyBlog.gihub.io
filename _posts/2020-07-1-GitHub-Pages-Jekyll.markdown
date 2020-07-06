@@ -3,6 +3,7 @@ layout: post
 title:  "jekyll搭建GitHub Pages"
 date:   2020-07-1 00:58:06 +0800
 color: rgb(255,0,0)
+author: YULIA
 cover: '../assets/test.png'
 categories: GitHub Pages
 tags: [GitHub Pages,Jekyll]
