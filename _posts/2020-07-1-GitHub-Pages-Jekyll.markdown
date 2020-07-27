@@ -4,7 +4,7 @@ title:  "jekyll搭建GitHub Pages"
 date:   2020-07-1 00:58:06 +0800
 color: rgb(255,51,51)
 author: YULIA
-cover: '../assets/test.png'
+cover: '../assets/GitHub_Pages/0.png'
 categories: GitHub Pages
 tags: [GitHub Pages,Jekyll]
 subtitle: '【MAC】从0开始建博客'
