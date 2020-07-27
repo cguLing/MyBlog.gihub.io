@@ -19,7 +19,8 @@ subtitle: '视频演示简单说明【资源仅供学习】'
    - 展示数据表  
    - 操作增删查改  
 
-###### 	结合HTML进行JavaEE框架中的JSP、Servlet编程。  
+>>>> 	结合HTML进行JavaEE框架中的JSP、Servlet编程。  
+
 # 环境及工具
 - Windows Server 2019  
 - Java SE 8u251  
@@ -115,7 +116,7 @@ public class User {
 - 前端JSP文件展示数据表【Markdown无法高亮所以就用图片了】  
   
 ![Alt text](/assets/Web_Mysql/4.png  "phpStudy"){:height="60%" width="60%"}
-### 演示视频
+## 演示视频
 <center>
 <!-- <video width="90%" height="385" src="/assets/Web_Mysql/first.mp4" type="video/mp4" 
     preload="auto" controls="controls" loop="-1">
@@ -165,7 +166,7 @@ isAdmin char(1) not null)AUTO_INCREMENT=1000;
 - 后端处理表单数据  
 - 后端提交数据给前端  
 ......【详情见`仅供学习`】  
-### 演示视频
+## 演示视频
 <center>
 <!-- <video width="90%" height="385" src="/assets/Web_Mysql/second.mp4" type="video/mp4" 
     preload="auto" controls="controls" loop="-1">

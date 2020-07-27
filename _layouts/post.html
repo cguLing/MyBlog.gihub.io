@@ -1,3 +1,4 @@
+
 <!-- 博文的布局-Layout -->
 <!DOCTYPE html>
 <html>
@@ -5,7 +6,26 @@
 <!-- 引入head标签 -->
 {% include head.html %}
 {% include androidColor.html %}
+<script src="/assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="/assets/js/toc.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
 </head>
+<style>
+  #toc{
+    position:fixed;
+    left:10px;
+    top: 70px;
+    display: inline-block;
+    border-width: 0 0 0 0;
+    box-shadow: #999999 0px 8px 40px 1px;
+    border-radius: 20px 20px 20px 20px;
+    font-weight: bolder;	
+    padding: 30px 10px 30px 0px;
+    color: inherit;
+    background-color: rgba(204,204,204,0.1);
+  }
+</style>
 <body>
 
 <!-- 顶部锚点 -->
@@ -16,8 +36,9 @@
 {% include boot.html %}
 <!-- 引入博文顶部样式 -->
 {% include post-title.html %}
+<div id="toc"></div>
+<div class="col-lg-offset-2 col-mg-10">
 <div class="markdown-body fadeInUp animated">
-
   {% if page.subtitle %}
     {% if page.color.size==0 or page.color==nil %}
       <div class="postpage-subtitle" style="border-left: 8px solid #9A85FF; border-right: 8px solid #9A85FF;">
@@ -34,6 +55,7 @@
   {{ page.content }}
   <!-- 引入share模块 -->
   {% include share.html %}
+</div>
 </div>
 
 <!-- 底部锚点 -->
@@ -66,5 +88,9 @@
     }
 </script>
 <script src="/assets/js/main.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#toc').toc();
+  }); </script>  
 </body>
 </html>
