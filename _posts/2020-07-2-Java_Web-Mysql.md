@@ -4,7 +4,7 @@ title: 'Java_web+MySQL演示'
 date: 2020-07-2 00:58:06 +0800
 author: YULIA
 color: rgb(255,102,0)
-cover: '../assets/welcome.jpeg'
+cover: '../assets/Web_Mysql/0.png'
 tags: [eclipse,Java_web,mysql,tomcat] 
 subtitle: '视频演示简单说明【资源仅供学习】'
 ---
